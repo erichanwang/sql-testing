@@ -1,18 +1,31 @@
-<!-- chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Data Chart + Die Roll</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Firebase Data Tracker</h2>
 
-<!-- form -->
-<form id="data-form">
-  <input id="label-input" type="text" placeholder="label" required>
-  <input id="value-input" type="number" placeholder="value" required>
-  <button type="submit">add</button>
-</form>
+    <!-- form -->
+    <form id="data-form">
+      <input id="label-input" type="text" placeholder="label" required>
+      <input id="value-input" type="number" placeholder="value" required>
+      <button type="submit">add</button>
+    </form>
 
-<!-- die button -->
-<button id="roll-die">roll die</button>
+    <!-- die roll -->
+    <button id="roll-die">roll die</button>
 
-<!-- chart -->
-<canvas id="data-chart" width="400" height="200"></canvas>
+    <!-- chart -->
+    <canvas id="data-chart"></canvas>
+  </div>
 
-<!-- your js -->
-<script type="module" src="script.js"></script>
+  <!-- firebase + main js -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

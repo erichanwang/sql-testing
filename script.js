@@ -70,12 +70,13 @@ function createChart(labels, data) {
 onValue(ref(database, "data"), (snapshot) => {
   const data = snapshot.val();
   if (data) {
-    const labels = [];
-    const values = [];
-    Object.values(data).forEach(item => {
-      labels.push(item.label);
-      values.push(item.value);
-    });
+    let entries = Object.values(data);
+    // sort numerically by value
+    entries.sort((a, b) => a.value - b.value);
+
+    const labels = entries.map(item => item.label);
+    const values = entries.map(item => item.value);
+
     createChart(labels, values);
   } else {
     createChart([], []);

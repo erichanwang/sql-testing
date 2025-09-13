@@ -1,0 +1,76 @@
+/* reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* centered container */
+.container {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* form layout */
+#data-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#data-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+}
+
+#data-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #36a2eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#data-form button:hover {
+  background: #258acb;
+}
+
+/* die roll button */
+#roll-die {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#roll-die:hover {
+  background: #3a8d3e;
+}
+
+/* chart sizing */
+#data-chart {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+}
