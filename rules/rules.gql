@@ -1,0 +1,25 @@
+# Sample security rules for Firebase Data Connect
+# Define access control for your data
+
+# Allow read access to all authenticated users
+query @auth(level: USER) {
+  users {
+    id
+    name
+    email
+  }
+}
+
+# Allow create for authenticated users
+mutation @auth(level: USER) {
+  createUser(input: { name: String!, email: String! }) {
+    id
+  }
+}
+
+# Admin only mutations
+mutation @auth(level: ADMIN) {
+  deleteUser(id: ID!) {
+    id
+  }
+}
